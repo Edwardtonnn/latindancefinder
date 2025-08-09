@@ -1,4 +1,3 @@
-// src/components/TestSupabase.tsx
 import { useEffect, useState } from 'react'
 import { supabase } from '../lib/supabase'
 
@@ -7,7 +6,7 @@ export default function TestSupabase() {
   const [errorMsg, setErrorMsg] = useState('')
 
   useEffect(() => {
-    (async () => {
+    ;(async () => {
       const { data, error } = await supabase
         .from('test_table')
         .select('message')
@@ -20,7 +19,7 @@ export default function TestSupabase() {
 
   return (
     <div style={{ padding: 12, border: '1px solid #ddd', borderRadius: 8, marginTop: 16 }}>
-      <div style={{ fontWeight: 'bold' }}>Supabase Test</div>
+      <div style={{ fontWeight: 700 }}>Supabase Test</div>
       <div>{errorMsg ? `Error: ${errorMsg}` : message}</div>
     </div>
   )
