@@ -5,9 +5,11 @@ export default function Hero() {
         <span className="inline-block text-xs font-semibold tracking-wide text-orange-700/80 bg-orange-100 rounded-full px-3 py-1">
           Groups only • Parks only • 6:00am–8:30pm
         </span>
-        <h1 className="mt-4 text-4xl md:text-5xl font-extrabold tracking-tight">
+        
+        <h1 className="text-orange-700 mt-4 text-4xl md:text-5xl font-extrabold tracking-tight">
           Find salsa & bachata practice groups near you
         </h1>
+        
         <p className="mt-3 md:text-lg text-gray-700 max-w-2xl mx-auto">
           Choose Salsa, Bachata or Blend. Meet at public parks. When 3 people join, the group goes live.
         </p>

@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* your custom styles can go AFTER these lines */
+
+
 :root {
   --ldf-bg: 255 255 255;
   --ldf-card: 255 255 255;
