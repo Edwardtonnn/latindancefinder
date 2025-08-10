@@ -1,38 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import TestSupabase from './components/TestSupabase'
+import NavBar from "./components/NavBar";
+import Hero from "./components/Hero";
+import Footer from "./components/Footer";
+import { DiscoverSection, CreateSection, HowItWorks, ContactSection } from "./components/Sections";
+// import ZipSearch from "./components/ZipSearch";
 
-
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Latin Dance Culture</h1>
-      <TestSupabase />
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <main className="min-h-screen bg-white">
+      <NavBar />
+      <Hero />
+      <DiscoverSection>
+        {/* <ZipSearch /> */}
+        <div className="rounded-2xl border border-dashed border-gray-300 bg-gray-50 p-6 text-sm text-gray-600">
+          ZIP search coming soon.
+        </div>
+      </DiscoverSection>
+      <CreateSection />
+      <HowItWorks />
+      <ContactSection />
+      <Footer />
+    </main>
+  );
 }
-
-export default App
